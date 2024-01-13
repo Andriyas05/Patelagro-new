@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CfsETXQzT1xIb3a05nCpe1L+RLV4OjVbU6RLmYuH6L3YbgZ05J+RdO9vddqjy4K4" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      
+        body {
+          background-color: #1E1E1E;
+          color: #FFFFFF;
+          width: 100%;
+          position: relative;
+          background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7),url(/contract-farming-1.jpg));
+        }
+        
+        .navbar-brand, .nav-link {
+          color: #FFFFFF;
+        }
+        .navbar-brand:hover, .nav-link:hover {
+          color: #FFFFFF;
+        }
+        .jumbotron {
+          background-color: #FFFFFF;
+          color: #2E7D32;
+        }
+        .card {
+          background-color: #2E7D32;
+          color: #FFFFFF;
+          
+        }
+        .card:hover {
+          background-color: #FFFFFF;
+          color: #2E7D32;
+        }
+        .btn-primary {
+          background-color: #2E7D32;
+          color: #FFFFFF;
+          border-color: #FFFFFF;
+        }
+        .btn-primary:hover {
+          background-color: #FFFFFF;
+          color: #2E7D32;
+          border-color: #2E7D32;
+        }
+        .slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.slide {
+  width: 90%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s;
+}
+
+.slide.active {
+  z-index: 1;
+  width: 50%;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#top-page{
+  display:flexbox;
+  
+  width:100%
+  
+}
+/* .class front_intro{
+  padding-left: 10px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.carousel-inner {
+    position: relative;
+    height: 100%;
+  }
+.carousel-container {
+    position: relative;
+    /* overflow: hidden; */
+    /* Adjust the padding-top value to control the height of the slider */
+    height: 100%;
+    width: 100%;
+    padding-bottom: 16px;
+    
+  }
+  
+  .carousel-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .carousel-item {
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    
+    height: 100%;
+  }
+  .col-md-6 {
+    padding-right: 0;
+  }
+  
+  .col-md-6 p {
+    margin-bottom: 0;
+  }
+  #front-intro{
+    height: 100%;
+    padding-bottom: 20px;
+  }
+  .container1 {
+  background-color: #111111;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading1 {
+  font-size: 5vw;
+  text-shadow: 4px 4px 0px #3F7FBF;
+  mix-blend-mode: screen;
+  animation: fadeIn 2.5s linear forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.paraGreen{
+  color: white;
+  font-size: 18px;
+  /* font-family:  Helvetica, sans-serif , 'Courier New', Courier, monospace; */
+}
+
+ </style>
+   
+
+    
+
+  <title>Bootstrap Starter Template</title>
+  </head>
+  <body>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Patel Agro</a>
+    <button class="navbar-toggler btn btn-primary" type="button " data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Brands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    </nav>
+<section class="top-page-img">
+<div class="container mt-5 " id="top-page">
+  <div class="class front_intro">
+    <div>
+    <h1 class="display-4 mb-5">Welcome to Patel Agro
+    </h1>
+    </div>
+      <div class="row">
+           <!-- <div class="col-md-6">
+            <img src="https://www.parleagro.com/images/homepage/welcome-to-parleagro.jpg" class="img-fluid rounded">
+           </div> -->
+        <!-- <div class="col-md-6">
+         <p>We are a Agro Tech startup that uses innovative technologies such as AI, robotics, and data analytics to improve efficiency and productivity in the agriculture industry. We aim to solve problems related to crop yield, food quality, soil health, water management, and supply chain logistics.</p>
+         <p>At Patel Agro Products & Services Pvt. Ltd., we are dedicated to revolutionizing the agricultural landscape by empowering farmers and maximizing their income potential. Our mission is to reduce farmers' dependence on costly fertilizers (NPK) by offering innovative solutions that utilize livestock waste and agricultural by-products.</p>
+         
+         <!-- <p>Our cutting-edge technology and expertise empower farmers to convert these organic resources into nutrient-rich fertilizers, fostering sustainable farming practices and reducing environmental impact. Through our comprehensive services, we ensure that farmers can achieve increased yields, improved soil health, and reduced input costs, ultimately leading to a significant boost in their income.</p>
+         <p>We take pride in our commitment to excellence, as we continuously innovate and refine our solutions to cater to the evolving needs of the agricultural sector. Our team of experienced professionals works closely with farmers, providing them with personalized guidance and support throughout their fertilizer production journey.</p>
+         <p>Join us in this transformative movement towards a more sustainable and profitable agriculture sector. Experience the benefits of producing your own fertilizer while contributing to a greener future. Explore our range of services and products designed to enhance your farm's productivity and profitability.</p>
+         <p>At Patel Agro Products & Services Pvt. Ltd., we believe in the power of partnerships. Collaborate with us and embark on a journey of sustainable farming practices, increased profitability, and a brighter future for farmers worldwide.</p> -->
+         <!-- <p>Together, let's cultivate success and create a sustainable agricultural ecosystem for generations to come.</p>
+         </div>
+         <div>
+         <a href="#" class="btn btn-primary btn-lg mt-3 my-3">Learn More</a>
+        </div>
+        </div>
+      
+       </div>
+  <div class="imag-farmer ">
+    <img src="9.jpg" alt="no image" width=500px height=500px>
+  </div>
+</div> -->
+<!-- </section>  -->
+
+<nav class="navbar navbar-expand-lg navbar-success bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/aboutus.html"><img src="IMG-20230506-WA0002-removebg-preview.png" width="150px"  height="55px" alt=""></a>
+    <button class="navbar-toggler btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#OurProducts">Our Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#OurBrands">Our Brands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ourlocation.html">Our Location</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contactus">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="top-page-img">
+  <div class="container mt-5" id="top-page" style="background-image: url('/sascontract-farming-1.jpg');">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="carousel-container">
+          <!-- Add the slider here -->
+          <div id="image-slider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="image1.jpg" class="img-fluid rounded" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="image2.jpeg" class="img-fluid rounded" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="image3.jpg" class="img-fluid rounded" alt="Image 3">
+              </div>
+              <div class="carousel-item">
+                <img src="image4.jpg" class="img-fluid rounded" alt="Image 4">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#image-slider" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#image-slider" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" id="front-intro">
+        <div>
+          <h1 class="display-4 mb-5"><b>Welcome to Patel Agro Products & Services Pvt. Ltd.</b>
+          </h1>
+          </div>
+          <div class="paraGreen">
+        <p class="">We are an Agro Tech startup that uses innovative technologies such as AI, robotics, and data analytics to improve efficiency and productivity in the agriculture industry. We aim to solve problems related to crop yield, food quality, soil health, water management, and supply chain logistics.</p>
+        <br>
+        <p>At Patel Agro Products & Services Pvt. Ltd., we are dedicated to revolutionizing the agricultural landscape by empowering farmers and maximizing their income potential. Our mission is to reduce farmers dependence on costly fertilizers (NPK) by offering innovative solutions that utilize livestock waste and agricultural by-products.</p>
+        <br>
+         <!-- <p>Our cutting-edge technology and expertise empower farmers to convert these organic resources into nutrient-rich fertilizers, fostering sustainable farming practices and reducing environmental impact. Through our comprehensive services, we ensure that farmers can achieve increased yields, improved soil health, and reduced input costs, ultimately leading to a significant boost in their income.</p>
+         <p>We take pride in our commitment to excellence, as we continuously innovate and refine our solutions to cater to the evolving needs of the agricultural sector. Our team of experienced professionals works closely with farmers, providing them with personalized guidance and support throughout their fertilizer production journey.</p> -->
+         <p >Join us in this transformative movement towards a more sustainable and profitable agriculture sector. Experience the benefits of producing your own fertilizer while contributing to a greener future. Explore our range of services and products designed to enhance your farm's productivity and profitability.</p>
+         <br>
+         <p>At Patel Agro Products & Services Pvt. Ltd., we believe in the power of partnerships. Collaborate with us and embark on a journey of sustainable farming practices, increased profitability, and a brighter future for farmers worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light" id="OurProducts">
+  <div class="container py-5">
+    <h2 class="text-center mb-5 text-dark">Our Products</h2>
+     <!-- <div class="container1">
+      <h1 class="heading1">Our Products</h1>
+    </div> -->
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="drone1.jpeg" card-img-top" alt="Frooti" height="220px">
+          <div class="card-body">
+            <h5 class="card-title">drone 1</h5>
+            <p class="card-text">India's favorite mango drink since 1985.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="drone2.jpg" class="card-img-top" alt="Appy" height="220px">
+          <div class="card-body">
+            <h5 class="card-title">drone 2</h5>
+            <p class="card-text">The original apple drink that's always a delight.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="drone3.jpeg" class="card-img-top" alt="Appy Fizz" height="220px">
+          <div class="card-body">
+            <h5 class="card-title">drone 3</h5>
+            <p class="card-text">India's first sparkling apple juice drink.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="drone4.jpg.crdownload" class="card-img-top" alt="Appy Fizz" height="220px">
+          <div class="card-body">
+            <h5 class="card-title">drone 4</h5>
+            <p class="card-text">India's first sparkling apple juice drink.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="fer1.jpeg" class="card-img-top" alt="Appy" height="220px">
+          <div class="card-body">
+            <h5 class="card-title">drone 2</h5>
+            <p class="card-text">The original apple drink that's always a delight.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="fer2.jpg" class="card-img-top" alt="Appy" height="220px">
+          <div class="card-body">
+            <h5 class="card-title">drone 2</h5>
+            <p class="card-text">The original apple drink that's always a delight.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="OurBrands">
+  <div class="container py-10">
+    <h2 class="text-center mb-5 mt-5">Our Brands</h2>
+    <!-- <div class="container1">
+      <h1 class="heading1">Our Brands</h1>
+    </div> -->
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="krishi.jpeg" class="card-img-top" alt="Bailley" height="320px">
+          <div class="card-body">
+            <h5 class="card-title">Krishi care</h5>
+            <p class="card-text">India's leading packaged drinking water brand.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="grow.jpeg" class="card-img-top" alt="Frooti" height="320px">
+          <div class="card-body">
+            <h5 class="card-title">Grow Bio</h5>
+            <p class="card-text">India's favorite mango drink since 1985.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow">
+          <img src="srorgo.jpg" class="card-img-top" alt="Frooti" height="320px">
+          <div class="card-body">
+            <h5 class="card-title">SR organics</h5>
+            <p class="card-text">India's favorite mango drink since 1985.</p>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+</section> 
+
+<section class="bg-light py-5">
+  <div class="container py-25 my-15">
+    <h2 class="text-center mb-5 py-10 text-dark">Our Brands & Products</h2>
+    <!-- <div class="container1">
+      <h1 class="heading1">Photos</h1>
+    </div> -->
+    <div class="slider">
+      <div class="slide active my-3">
+        <img src="drone1.jpeg" alt="Product 1" >
+      </div>
+      <div class="slide my-3">
+        <img src="drone2.jpg" alt="Product 2" >
+      </div>
+      <div class="slide my-3">
+        <img src="drone3.jpeg" alt="Product 3" >
+      </div>
+      <div class="slide my-3">
+        <img src="drone4.jpg.crdownload" alt="Product 3" >
+      </div>
+      <div class="slide my-3">
+        <img src="krishi.jpeg" alt="Product 3">
+      </div>
+      <div class="slide my-3">
+        <img src="grow.jpeg" alt="Product 3" >
+      </div>
+      <div class="slide my-3">
+        <img src="srorgo.jpg" alt="Product 3" >
+      </div>
+      
+    
+    </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-success text-white py-5 bg-dark" id="contactus">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4 paddingRight ">
+        <h5 class="about1">About Us</h5>
+        <p>Patel Agro Products & Services Pvt. Ltd. is dedicated to
+          revolutionizing the agricultural landscape by empowering farmers
+          and maximizing their income potential. Our mission is to reduce
+          farmers' dependence on costly fertilizers (NPK) by offering
+          innovative solutions that utilize livestock waste and agricultural
+          by-products.</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Contact Us</h5>
+        <address>
+          <strong>PATEL AGRO PRODUCTS & SERVICES PVT. LTD.</strong><br>
+          Office- National Highway 45 Dhanashri,<br>
+          Bareli-464668<br>
+          Madhya Pradesh<br>
+          India<br>
+          <i class="fa fa-phone me-2 "></i>+91 62611 18789<br>
+          <i class="fa fa-envelope me-2"></i>contact@patelagro.in
+        </address>
+      </div>
+    </div>
+  </div>
+</footer> 
+
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-9L7Zctm27y5+TqoKvT1MFk5rjsUXg2sSzmo/szvIe7l+ZIjNp61FVvRcH8kJ1UZi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-1vcyQ1bq8ZyA/GmlmlQn5KgX6Zmjjfd3WQR5AflA2yOuPBJ/N0nP0W0wjW/QTboC" crossorigin="anonymous"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<script>
+  var slider = document.querySelector(".slider");
+  
+  var slides = Array.from(slider.querySelectorAll(".slide"));
+  
+  var currentSlide = 0;
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+    slides[currentSlide - 1].classList.remove("active");
+  }
+  
+  setInterval(nextSlide, 2000);
+  </script>
+  </body>
+</html>
